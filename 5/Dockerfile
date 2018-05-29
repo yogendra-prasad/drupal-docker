@@ -27,7 +27,7 @@ COPY . /var/www/html/drupal
 WORKDIR /var/www/html/drupal
 
 
-COPY ../web/ports.conf /etc/apache2/
+COPY ./web/ports.conf /etc/apache2/
 
 EXPOSE 81
 CMD apachectl -D FOREGROUND
