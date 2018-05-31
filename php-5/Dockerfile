@@ -36,6 +36,7 @@ RUN apt-get install -y \
 RUN a2enmod rewrite headers fastcgi actions
 COPY ./docker-utils/apache2/mods-enabled/*.conf /etc/apache2/mods-enabled
 COPY ./docker-utils/apache2/sites/*.conf /etc/apache2/sites-available
+COPY ./docker-utils/apache2/sites/*.conf /etc/apache2/sites-enabled
 COPY ./docker-utils/supervisord/*.conf /etc/supervisor/conf.d/
 COPY ./docker-utils/scripts /scripts/
 COPY ./docker-utils/apache2/keys/* /etc/apache2/ssl/
