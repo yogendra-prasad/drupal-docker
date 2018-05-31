@@ -43,7 +43,7 @@ COPY ./docker-utils/apache2/keys/* /etc/apache2/ssl/
 RUN chmod u+x /scripts/*.sh
 
 RUN a2dissite 000-default
-RUN a2ensite dev.oncorps.local
+#RUN a2ensite dev.oncorps.local
 
 
 RUN mkdir -p /var/www/html/drupal
